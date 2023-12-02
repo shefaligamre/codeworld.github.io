@@ -657,91 +657,18 @@ div.python-try a{
   nav li {
     margin-right: 32px; /* Adjust the spacing as needed */
   }
+}
 
-  .start{
-    padding: 80px;
-    margin-top: 100px;
-  }
-
-  .html, .css, .javascript, .python {
-    height: auto;
-    margin-top: 10px;
-   
-  }
-
-  .output2, .css-output2, .java-output2, .python-output {
-    width: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-    height: auto;
-    
-    
-  }
-
-  #code-editor, #css-editor , #java-editor, #python-editor{
-    width: 100%;
-    height: auto;
-    left: 0;
-    padding: 120px;
-  }
-
-  #code-editor pre{
-    font-size: 2px;
-    overflow: hidden;
-    position: absolute;
-    display: block;
   
-  }
+   
 
-  #code-editor {
-    width: 80%; /* Adjusted width for smaller screens */
-    left: 10%; /* Centering the editor */
-    right: auto;
-}
+  
 
-div.try {
-    width: 80%;
-    left: 10%;
-    right: auto;
-}
 
-#css-editor {
-  width: 80%;
-  left: 10%;
-  right: auto;
-}
 
-div.css-try {
-  width: 80%;
-  left: 10%;
-  right: auto;
-}
 
-#java-editor {
-  width: 80%;
-  left: 10%;
-  right: auto;
-}
 
-div.java-try {
-  width: 80%;
-  left: 10%;
-  right: auto;
-}
-#python-editor {
-  width: 80%;
-  left: 10%;
-  right: auto;
-}
 
-div.python-try {
-  width: 80%;
-  left: 10%;
-  right: auto;
-}
-}
-
-}
 
 
 
