@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Tutorial</title>
+<style>
+    body, h1, h2, ul, li {
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* Basic styles */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+    }
+    
+    header {
+        background-color: #009688;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        position: fixed;
+        width: 100%;
+        height: 50px;
+        top: 0;
+        z-index: 1000;
+       
+    }
+    
+    nav ul {
+        list-style-type: none;
+        background-color: #333;
+        overflow: hidden;
+        position: fixed;
+        top: 80px; /* adjust this value based on your header height */
+        width: 100%;
+        z-index: 1000;
+       
+       
+    }
+    
+    nav li {
+        float: left;
+        
+    }
+    
+    .like {
+        color: red;
+        cursor: pointer;
+        margin-top: 8px;
+        margin-left: 48px;
+        font-size: 20px;
+        background-color: black;
+        width: 50px;
+        text-align: center;
+        border-radius: 10px;
+    
+    }
+    
+    .like:hover{
+        box-shadow: 0 0 5px red,0 0 25px red,0 0 5px cyan,0 0 1px cyan,0 0 0px cyan;
+    
+    }
+    
+    
+    
+    nav a {
+        display: block;
+        color: #fff;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        position: relative;
+        left: 35px;
+    }
+    
+    nav a:hover {
+        background-color: #555;
+        color: white;
+        transition: background-color 0.3s;
+        
+    }
+    
+    #login {
+        margin-left: 1500px;
+        margin-top: 120px;
+        font-family: Arial, sans-serif;
+        
+      }
+    
+      #login:hover {
+        background-color: #555;
+        width: 50px;
+      }
+    
+      .login {
+        float:right
+    
+      }
+    
+      .login a{
+        background-color: #009688;
+        color: white;
+        border: none;
+        padding: 5px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 8px 50px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+      #menu {
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 125px;
+        width: 20%;
+        height: 467px;
+        background-color: rgb(214, 210, 210);
+        color: #fff;
+        overflow-y: auto;
+        padding-top: 2px;
+      }
+      
+      #menu a {
+        display: block;
+        padding: 12px;
+        color: #333;
+        text-decoration: none;
+        transition: background-color 0.3s;
+      }
+      
+      #menu a:hover {
+        background-color: #555;
+        color: white;
+      }
+
+      #menu-icon{
+        color: #f0f0f0;
+        font-size: 20px;
+        position: relative;
+        left: 20px;
+        top: 8px;
+      }
+      
+       @media screen and (max-width: 600px) {
+  nav ul {
+    display: flex;
+    list-style-type: none;
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+  }
+  
+  nav li {
+    margin-right: 33px; /* Adjust the spacing as needed */
+  }
+  
+  #menu {
+    width:50%;
+    height: 500px;
+    
+}
+
+#menu {
+    width:60%;
+    height: 450px;
+    margin-top: 18px;
+    
+}
+
+#menu-icon {
+    overflow: hidden;
+    position: fixed;
+    top: 80px; /* adjust this value based on your header height */
+    left: 0px;
+    z-index: 1000;
+    background-color: #333;
+    padding-top: 10px;
+    padding-left: 18px;
+    padding-bottom: 9px;
+    text-align: center;
+    overflow: hidden;
+    margin-top: 0px;
+    cursor: pointer;
+}
+
+
+       }
+      
+</style>
+</head>
+<body>
+    <header>
+        <h1>CODE WORLD</h1>
+    </header>
+    <nav>
+        <ul>
+            <li id="menu-icon" onclick="toggleMenu()">☰</li>
+            <li><a href="css1.html" target="_black">CSS</a></li>
+            <li><a href="html1.html" target="_blank">HTML</a></li>
+            <li><a href="javascript1.html" target="_blank">JAVASCRIPT</a></li>
+            <li><a href="python1.html" target="_blank">PYTHON</a></li>
+            <li class="login"><a href="#">LOGIN</a></li>
+        
+    
+        </ul>
+    </nav>
+
+    <div id="menu">
+        <a href="#html-attributes" style="font-size:25px;color:black;">CSS Tutorial</a>
+        <a href="#html-introduction">CSS Home</a>
+        <a href="#html-element">CSS Introduction</a>
+        <a href="#html-heading">CSS Syntax</a>
+        <a href="#html-attributes">CSS Selector</a>
+        <a href="#html-attributes">CSS How To</a>
+        <a href="#html-attributes">CSS Comments</a>
+        <a href="#html-attributes">CSS Colors</a>
+        <a href="#html-attributes">CSS Backgrounds</a>
+        <a href="#html-attributes">CSS Borders</a>
+        <a href="#html-attributes">CSS Margins</a>
+        <a href="#html-attributes">CSS padding</a>
+        <a href="#html-attributes">CSS Height/Width</a>
+        <a href="#html-attributes">CSS Box Model</a>
+        <a href="#html-attributes">CSS Outline</a>
+        <a href="#html-attributes">CSS Text</a>
+        <a href="#html-attributes">CSS Fonts</a>
+        <a href="#html-attributes">CSS Icon</a>
+        <a href="#html-attributes">CSS Links</a>
+        <a href="#html-attributes">CSS Lists</a>
+        <a href="#html-attributes">CSS Tables</a>
+        <a href="#html-attributes">CSS Disply</a>
+        <a href="#html-attributes">CSS Max-width</a>
+        <a href="#html-attributes">CSS Position</a>
+        <a href="#html-attributes">CSS Z-index</a>
+        <a href="#html-attributes">CSS Overflow</a>
+        <a href="#html-attributes">CSS float</a>
+        <a href="#html-attributes">CSS inline-block</a>
+        <a href="#html-attributes">CSS Align</a>
+        <a href="#html-attributes">CSS Combinators</a>
+        <a href="#html-attributes">CSS Pseudo-elements</a>
+        <a href="#html-attributes">CSS Opacity</a>
+        <a href="#html-attributes">CSS Navigation Bar</a>
+        <a href="#html-attributes">CSS Dropdowns</a>
+        <a href="#html-attributes">CSS Image Gallery</a>
+        <a href="#html-attributes">CSS Image Sprites</a>
+        <a href="#html-attributes">CSS Attr Selectors</a>
+        <a href="#html-attributes">CSS Form</a>
+        <a href="#html-attributes">CSS Counters</a>
+        <a href="#html-attributes">CSS Website Layout</a>
+        <a href="#html-attributes">CSS Units</a>
+        <a href="#html-attributes">CSS Specificity</a>
+        <a href="#html-attributes">CSS Important</a>
+        <a href="#html-attributes">CSS Math Foctions</a>
+        <a href="#html-attributes"style="font-size:25px;color:black;">CSS Advance</a>
+        <a href="#html-attributes">CSS Rounded Corners</a>
+        <a href="#html-attributes">CSS Border Images</a>
+        <a href="#html-attributes">CSS Backgrounds</a>
+        <a href="#html-attributes">CSS Colors</a>
+        <a href="#html-attributes">CSS Color Keywords</a>
+        <a href="#html-attributes">CSS Shadows</a>
+        <a href="#html-attributes">CSS Text Effects</a>
+        <a href="#html-attributes">CSS 2D Transforms</a>
+        <a href="#html-attributes">CSS 3D Transforms</a>
+        <a href="#html-attributes">CSS Transitions</a>
+        <a href="#html-attributes">CSS Animations</a>
+        <a href="#html-attributes">CSS Tooltips</a>
+        <a href="#html-attributes">CSS Style Images</a>
+        <a href="#html-attributes">CSS Image Reflection</a>
+        <a href="#html-attributes">CSS object-fit</a>
+        <a href="#html-attributes">CSS object-position</a>
+        <a href="#html-attributes">CSS object-position</a>
+        <a href="#html-attributes">CSS Pagination</a>
+        <a href="#html-attributes">CSS Multiple Columns</a>
+        <a href="#html-attributes">CSS User Interface</a>
+        <a href="#html-attributes">CSS Variables</a>
+        <a href="#html-attributes">CSS Box Sizing</a>
+        <a href="#html-attributes">CSS Media Queries</a>
+        <a href="#html-attributes">CSS MQ Examples</a>
+        <a href="#html-attributes">CSS Flexbox</a>
+        <a href="#html-attributes"style="font-size:25px;color:black;"> CSS Responsive</a>
+        <a href="#html-attributes">RWD Intro</a>
+        <a href="#html-attributes">RWD Viewport</a>
+        <a href="#html-attributes">RWD Grid View</a>
+        <a href="#html-attributes">RWD Media Queries</a>
+        <a href="#html-attributes">RWD Images</a>
+        <a href="#html-attributes">RWD Videos</a>
+        <a href="#html-attributes">RWD Frameworks</a>
+        <a href="#html-attributes">RWD Templates</a>
+        <a href="#html-attributes"style="font-size:25px;color:black;"> CSS Grid</a>
+        <a href="#html-attributes">Grid Intro</a>
+        <a href="#html-attributes">Grid Item</a>
+        <a href="#html-attributes"style="font-size:25px;color:black;"> CSS SASS</a>
+        <a href="#html-attributes">SASS Tutorial</a>
+       
+        
+
+        
+        
+        <!-- Add more menu items as needed -->
+    </div>
+
+    <script>
+        let likescount = 0;
+        let isliked = false;
+        const likescountElement = document.getElementById('Likes-count');
+
+        function toggleLikes() {
+            if (!isliked) {
+                likescount++;
+                likescountElement.textContent = likescount;
+                likescountElement.style.display = 'inline';
+                isliked = true;
+            }
+        }
+
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>

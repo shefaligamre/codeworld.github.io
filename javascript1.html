@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Tutorial</title>
+<style>
+    body, h1, h2, ul, li {
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* Basic styles */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+    }
+    
+    header {
+        background-color: #009688;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        position: fixed;
+        width: 100%;
+        height: 50px;
+        top: 0;
+        z-index: 1000;
+       
+    }
+    
+    nav ul {
+        list-style-type: none;
+        background-color: #333;
+        overflow: hidden;
+        position: fixed;
+        top: 80px; /* adjust this value based on your header height */
+        width: 100%;
+        z-index: 1000;
+       
+       
+    }
+    
+    nav li {
+        float: left;
+        
+    }
+    
+    .like {
+        color: red;
+        cursor: pointer;
+        margin-top: 8px;
+        margin-left: 48px;
+        font-size: 20px;
+        background-color: black;
+        width: 50px;
+        text-align: center;
+        border-radius: 10px;
+    
+    }
+    
+    .like:hover{
+        box-shadow: 0 0 5px red,0 0 25px red,0 0 5px cyan,0 0 1px cyan,0 0 0px cyan;
+    
+    }
+    
+    
+    
+    nav a {
+        display: block;
+        color: #fff;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        position: relative;
+        left: 35px;
+    }
+    
+    nav a:hover {
+        background-color: #555;
+        color: white;
+        transition: background-color 0.3s;
+        
+    }
+    
+    #login {
+        margin-left: 1500px;
+        margin-top: 120px;
+        font-family: Arial, sans-serif;
+        
+      }
+    
+      #login:hover {
+        background-color: #555;
+        width: 50px;
+      }
+    
+      .login {
+        float:right
+    
+      }
+    
+      .login a{
+        background-color: #009688;
+        color: white;
+        border: none;
+        padding: 5px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 8px 50px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+      #menu {
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 125px;
+        width: 20%;
+        height: 467px;
+        background-color: rgb(214, 210, 210);
+        color: #fff;
+        overflow-y: auto;
+        padding-top: 2px;
+      }
+      
+      #menu a {
+        display: block;
+        padding: 12px;
+        color: #333;
+        text-decoration: none;
+        transition: background-color 0.3s;
+      }
+      
+      #menu a:hover {
+        background-color: #555;
+        color: white;
+      }
+
+      #menu-icon{
+        color: #f0f0f0;
+        font-size: 20px;
+        position: relative;
+        left: 20px;
+        top: 8px;
+      }
+      
+       @media screen and (max-width: 600px) {
+  nav ul {
+    display: flex;
+    list-style-type: none;
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+  }
+  
+  nav li {
+    margin-right: 33px; /* Adjust the spacing as needed */
+  }
+  
+
+
+#menu {
+    width:60%;
+    height: 450px;
+    margin-top: 18px;
+    
+}
+
+#menu-icon {
+    overflow: hidden;
+    position: fixed;
+    top: 80px; /* adjust this value based on your header height */
+    left: 0px;
+    z-index: 1000;
+    background-color: #333;
+    padding-top: 10px;
+    padding-left: 18px;
+    padding-bottom: 9px;
+    text-align: center;
+    overflow: hidden;
+    margin-top: 0px;
+    cursor: pointer;
+}
+
+
+       }
+      
+</style>
+</head>
+<body>
+    <header>
+        <h1>CODE WORLD</h1>
+    </header>
+    <nav>
+        <ul>
+            <li id="menu-icon" onclick="toggleMenu()">☰</li>
+            <li><a href="javascript1.html" target="_blank">JAVASCRIPT</a></li>
+            <li><a href="html1.html" target="_blank">HTML</a></li>
+            <li><a href="css1.html" target="_blank">CSS</a></li>
+            <li><a href="python1.html" target="_blank">PYTHON</a></li>
+            <li class="login"><a href="#">LOGIN</a></li>
+        
+    
+        </ul>
+    </nav>
+
+    <div id="menu">
+        <a href="#html-attributes" style="font-size:25px;color:black;">javasript Tutorial</a>
+        <a href="#html-introduction">HTML Introduction</a>
+        <a href="#html-element">HTML Element</a>
+        <a href="#html-heading">HTML Heading</a>
+        <a href="#html-attributes">HTML paregraphs</a>
+        <a href="#html-attributes">HTML Style</a>
+        <a href="#html-attributes">HTML Formatting</a>
+        <a href="#html-attributes">HTML Quotation</a>
+        <a href="#html-attributes">HTML Comments</a>
+        <a href="#html-attributes">HTML Colors</a>
+        <a href="#html-attributes">HTML Css</a>
+        <a href="#html-attributes">HTML Images</a>
+        <a href="#html-attributes">HTML Favicon</a>
+        <a href="#html-attributes">HTML Page Title</a>
+        <a href="#html-attributes">HTML Tables</a>
+        <a href="#html-attributes">HTML Lists</a>
+        <a href="#html-attributes">HTML Block & Inline</a>
+        <a href="#html-attributes">HTML Div</a>
+        <a href="#html-attributes">HTML Classes</a>
+        <a href="#html-attributes">HTML Id</a>
+        <a href="#html-attributes">HTML Iframe</a>
+        <a href="#html-attributes">HTML Javascript</a>
+        <a href="#html-attributes">HTML File Paths</a>
+        <a href="#html-attributes">HTML Head</a>
+        <a href="#html-attributes">HTML Layout</a>
+        <a href="#html-attributes">HTML Responsive</a>
+        <a href="#html-attributes">HTML Computercode</a>
+        <a href="#html-attributes">HTML Semantics</a>
+        <a href="#html-attributes">HTML Style Guide</a>
+        <a href="#html-attributes">HTML Entities</a>
+        <a href="#html-attributes">HTML Symbols</a>
+        <a href="#html-attributes">HTML Emojis</a>
+        <a href="#html-attributes">HTML Charsets</a>
+        <a href="#html-attributes">HTML URL Ecode</a>
+        <a href="#html-attributes" style="font-size:25px;color:black;">HTML Forms</a>
+        <a href="#html-attributes">HTML Forms</a>
+        <a href="#html-attributes">HTML Attributes</a>
+        <a href="#html-attributes">HTML </a>
+        <a href="#html-attributes">HTML Attributes</a>
+        <a href="#html-attributes">HTML Form Attributes</a>
+        <a href="#html-attributes">HTML Input Type</a>
+        <a href="#html-attributes">HTML Input Attributes</a>
+        <a href="#html-attributes">HTML Input Form Attributes</a>
+        <a href="#html-attributes"style="font-size:25px;color:black;">HTML Media</a>
+        <a href="#html-attributes">HTML Video</a>
+        <a href="#html-attributes">HTML Audio</a>
+        <a href="#html-attributes">HTML Plug-ins</a>
+        <a href="#html-attributes"style="font-size:25px;color:black;">HTML Reference</a>
+        <a href="#html-attributes">HTML Tag List</a>
+        <a href="#html-attributes">HTML Color</a>
+        <!-- Add more menu items as needed -->
+    </div>
+
+    <script>
+        let likescount = 0;
+        let isliked = false;
+        const likescountElement = document.getElementById('Likes-count');
+
+        function toggleLikes() {
+            if (!isliked) {
+                likescount++;
+                likescountElement.textContent = likescount;
+                likescountElement.style.display = 'inline';
+                isliked = true;
+            }
+        }
+
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>
