@@ -751,6 +751,10 @@ footer {
     max-width: none;
     text-align: center;
   }
+    header h1{
+    position: relative;
+    right: 20px;
+   }
 }
 
   
