@@ -31,6 +31,10 @@
             border-radius: 5px;
             transition: background-color 0.3s, color 0.3s;
         }
+        #button-container a{
+            text-decoration: none;
+            color: white;
+        }
 
         .run-code-button {
             background-color: #007bff;
@@ -109,7 +113,7 @@
         <button class="button dark-mode-button" onclick="toggleDarkMode()">Toggle Dark Mode</button>
 
         <!-- Home page icon -->
-        <button class="button home-button" onclick="goToHomePage()">🏠 Home</button>
+        <button class="button home-button" onclick="goToHomePage()"><a href="index.html">🏠 Home</a></button>
     </div>
 
     <!-- Code container with textarea and output -->
