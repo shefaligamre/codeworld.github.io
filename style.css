@@ -265,7 +265,7 @@ div.try{
   margin-top: 17px;
   position: relative;
   left: 20px;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 div.try a{
@@ -381,7 +381,7 @@ div.css-try{
   margin-top: 20px;
   position: relative;
   left: 20px;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 div.css-try a{
@@ -502,7 +502,7 @@ div.java-try{
   margin-top: 20px;
   position: relative;
   left: 20px;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 div.java-try a{
@@ -628,7 +628,7 @@ div.python-try{
   margin-top: 20px;
   position: relative;
   left: 20px;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 div.python-try a{
