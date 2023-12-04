@@ -121,25 +121,30 @@
 &lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
-&lt;meta charset="UTF-8"&gt;
-&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-&lt;title&gt;JavaScript Example&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;JavaScript Example&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
-            
-  &lt;h1&gt;JavaScript Example&lt;/h1&gt;
-            
-  &lt;button onclick="showAlert()"&gt;Click Me&lt;/button&gt;
-            
-&lt;script&gt;
-    // JavaScript code
-    function showAlert() {
-    alert('Hello, World!');
-    }
-&lt;/script&gt;
-            
+
+    &lt;h1&gt;JavaScript Example&lt;/h1&gt;
+
+    &lt;button onclick="myFunction()"&gt;Click Me!&lt;/button&gt;
+
+    &lt;p&gt;Text will change here: &lt;span id="demo"&gt;Original Text&lt;/span&gt;&lt;/p&gt;
+
+    &lt;script&gt;
+        // JavaScript code
+        function myFunction() {
+            let x = document.getElementById("demo");
+            x.style.fontSize = "25px";
+            x.style.color = "red";
+        }
+    &lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;
+
             
 
 
