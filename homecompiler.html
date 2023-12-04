@@ -22,6 +22,11 @@
             margin-bottom: 10px;
         }
 
+        #button-container a{
+            text-decoration: none;
+            color: white;
+        }
+
         .button {
             cursor: pointer;
             padding: 8px;
@@ -30,10 +35,6 @@
             color: #fff;
             border-radius: 5px;
             transition: background-color 0.3s, color 0.3s;
-        }
-        #button-container a{
-            text-decoration: none;
-            color: white;
         }
 
         .run-code-button {
@@ -77,14 +78,12 @@
             margin-top: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             background-color: whitesmoke;
-            
         }
 
         /* Dark mode styles */
         body.dark-mode {
             background-color: #333;
-            color: black;
-            
+            color: cyan;
         }
 
         @media screen and (max-width: 600px) {
@@ -96,14 +95,13 @@
             #code,
             #output {
                 width: 100%;
-                
             }
         }
     </style>
 </head>
 <body>
     <h1>Code World</h1>
-    
+
     <!-- Button container for the menu bar -->
     <div id="button-container">
         <!-- Run Code button -->
@@ -117,9 +115,7 @@
     </div>
 
     <!-- Code container with textarea and output -->
-    
     <div id="code-container">
-        
         <!-- Textarea for code input -->
         <textarea id="code" rows="25" cols="50" placeholder="Enter your code">
 &lt;!DOCTYPE html&gt;
@@ -134,16 +130,20 @@
 &lt;/html&gt;
         </textarea>
 
-        <!-- Output div -->
-        <div id="output"></div>
+        <!-- Output iframe -->
+        <iframe id="output" frameborder="0"></iframe>
     </div>
 
     <script>
         function runCode() {
             var code = document.getElementById("code").value;
-            
+
             try {
-                document.getElementById("output").innerHTML = code;
+                // Create a new document in the iframe and write the code
+                var iframeDocument = document.getElementById("output").contentWindow.document;
+                iframeDocument.open();
+                iframeDocument.write(code);
+                iframeDocument.close();
             } catch (error) {
                 document.getElementById("output").innerHTML = "Error: " + error.message;
             }
