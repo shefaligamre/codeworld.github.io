@@ -272,7 +272,7 @@ div.try a{
  width: 2000px;
  font-family:Verdana, Geneva, Tahoma, sans-serif;
  position: relative;
- top: 10px;
+ top: 6px;
  font-size: 14px;
  
 }
@@ -388,7 +388,7 @@ div.css-try a{
   width: 2000px;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   position: relative;
-  top: 3px;
+  top: 5px;
   font-size: 14px;
   
  }
@@ -509,7 +509,7 @@ div.java-try a{
   width: 2000px;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   position: relative;
-  top: 3px;
+  top: 5px;
   font-size: 14px;
   color: wheat;
   
@@ -635,7 +635,7 @@ div.python-try a{
   width: 2000px;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   position: relative;
-  top: 3px;
+  top: 5px;
   font-size: 14px;
   color: black;
   
