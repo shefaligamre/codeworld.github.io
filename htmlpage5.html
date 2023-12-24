@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>HTML Tutorial</title>
+<style>
+    body, h1, h2, ul, li {
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* Basic styles */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+    }
+    
+    header {
+        background-color: #009688;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        position: fixed;
+        width: 100%;
+        height: 50px;
+        top: 0;
+        z-index: 1000;
+       
+    }
+    
+    nav ul {
+        list-style-type: none;
+        background-color: #333;
+        overflow: hidden;
+        position: fixed;
+        top: 80px; /* adjust this value based on your header height */
+        width: 100%;
+        z-index: 1000;
+       
+       
+    }
+    
+    nav li {
+        float: left;
+        
+    }
+    
+    .like {
+        color: red;
+        cursor: pointer;
+        margin-top: 8px;
+        margin-left: 48px;
+        font-size: 20px;
+        background-color: black;
+        width: 50px;
+        text-align: center;
+        border-radius: 10px;
+    
+    }
+    
+    .like:hover{
+        box-shadow: 0 0 5px red,0 0 25px red,0 0 5px cyan,0 0 1px cyan,0 0 0px cyan;
+    
+    }
+    
+    
+    
+    nav a {
+        display: block;
+        color: #fff;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        position: relative;
+        left: 0px;
+    }
+    
+    nav a:hover {
+        background-color: #555;
+        color: white;
+        transition: background-color 0.3s;
+        
+    }
+    
+    #login {
+        margin-left: 1500px;
+        margin-top: 120px;
+        font-family: Arial, sans-serif;
+        
+      }
+    
+      #login:hover {
+        background-color: #555;
+        width: 50px;
+      }
+    
+      .login {
+        float:right
+    
+      }
+    
+      .login a{
+        background-color: #009688;
+        color: white;
+        border: none;
+        padding: 5px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 8px 50px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+      #menu {
+        position: fixed;
+        left: 0;
+        top: 125px;
+        width: 20%;
+        height: 467px;
+        background-color: rgb(214, 210, 210);
+        color: #fff;
+        overflow-y: auto;
+        padding-top: 2px;
+      }
+      
+      #menu a {
+        display: block;
+        padding: 12px;
+        color: #333;
+        text-decoration: none;
+        transition: background-color 0.3s;
+      }
+      
+      #menu a:hover {
+        background-color: #555;
+        color: white;
+      }
+
+      #menu-icon{
+        display: none;
+        color: #f0f0f0;
+        font-size: 20px;
+        position: relative;
+        left: 20px;
+        top: 8px;
+      }
+
+      .elements {
+        flex: 1;
+        margin-top: 130px; /* Adjust the margin as needed */
+        margin-left: 250px; /* Adjust the margin as needed */
+        padding: 20px;
+        background-color: #ffffff; /* Set your desired background color */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a shadow for separation */
+    }
+
+      .elements{
+        flex: 1;
+            width: 77%;
+            font-size: 28px;
+            margin-top: 132px; /* Adjust the margin as needed */
+            padding: 10px;
+            position:absolute;
+            left: 10px;
+            background-color: #ffffff; /* Set your desired background color */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a shadow for separation */
+        }
+    
+        .elements p{
+            font-size: 18px;
+           
+        }
+
+        .elements-2{
+            width: 98%;
+            height: 2380px;
+            font-size: 16px;
+            margin-top: 15px; /* Adjust the margin as needed */
+            padding: 10px;
+            position:absolute;
+            left: 0px;
+            background-color: #ffffff; /* Set your desired background color */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a shadow for separation */
+
+        }
+
+        .elements-2 ul{
+            margin-top: 20px;
+            margin-left: 40px;
+        }
+
+        .elements-2 li{
+            line-height: 30px;
+            font-size: 17px;
+        }
+        .elements-2 h3{
+            font-size: 28px;
+            position: relative;
+            top: 10px;
+            left: 15px;
+            font-size: 25px;
+
+        }
+
+        .elements-2 h2{
+            font-size: 30px;
+            margin-top: 20px;
+        }
+
+        .ex1{
+            background-color:  #dad6d6;
+            width: 100%;
+            height: 185px;
+            border-radius: 5px;
+        }
+
+        .ex1 button{
+            margin-left: 18px;
+            width: 130px;
+            height: 30px;
+            border-radius: 5px;
+            border: none;
+            background-color: #009688;
+            position: relative;
+            top: 80px;
+        
+        }
+
+        .ex1 button:hover{
+            background-color: #128075;
+        }
+
+        .ex1 a{
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            
+        }
+
+        .ex2{
+            background-color: white;
+            width: 97%;
+            height: 60px;
+            margin-left: 15px;
+            border-left: 4px solid cyan;
+            border-radius: 5px;
+            position: relative;
+            bottom: 45px;
+        }
+
+        .ex2 pre{
+            position: relative;
+            top: 10px;
+            right: 235px;
+        }
+
+        .HTMLDisplay{
+            margin-top: 50px;
+        }
+
+        .ex3{
+           background-color: #dad6d6;
+           height: 425px;
+           border-radius: 5px;
+
+        }
+
+        .ex3 button{
+            margin-left: 18px;
+            width: 130px;
+            height: 30px;
+            border-radius: 5px;
+            border: none;
+            background-color: #009688;
+            position: relative;
+            top: 320px;
+        
+        }
+
+        .ex3 button:hover{
+            background-color: #128075;
+        }
+
+        .ex3 a{
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            
+        }
+
+        .ex4{
+            background-color: white;
+            width: 97%;
+            height: 300px;
+            margin-left: 15px;
+            border-radius: 5px;
+            border-left: 4px solid cyan;
+            position: relative;
+            bottom: 45px;
+        }
+
+        .ex4 pre{
+            position: relative;
+            top: 7px;
+            right: 230px;
+
+        }
+        .HTMLLineBreaks h2{
+            margin-top: 30px;
+        }
+
+        .ex5{
+            background-color: #dad6d6;
+            width: 100%;
+            height: 315px;
+            border-radius: 5px;
+        }
+
+        .ex5 button{
+            margin-left: 18px;
+            width: 130px;
+            height: 30px;
+            border-radius: 5px;
+            border: none;
+            background-color: #009688;
+            position: relative;
+            top: 210px;
+        
+        }
+
+        .ex5 button:hover{
+            background-color: #128075;
+        }
+
+        .ex5 a{
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            
+        }
+
+        .ex6{
+            background-color: white;
+            width: 97%;
+            height: 190px;
+            border-radius: 5px;
+            border-left: 4px solid cyan;
+            margin-left: 15px;
+            position: relative;
+            bottom: 45px;
+        }
+
+        .ex6 pre{
+            position: relative;
+            right: 230px;
+            top: 7px;
+        }
+        
+        .SolutionTheHTMLElement{
+            margin-top: 30px;
+        }
+
+        .ex7{
+            background-color: #dad6d6;
+            width: 100%;
+            height: 315px;
+            border-radius: 5px;
+        }
+
+        .ex7 button{
+            margin-left: 18px;
+            width: 130px;
+            height: 30px;
+            border-radius: 5px;
+            border: none;
+            background-color: #009688;
+            position: relative;
+            top: 210px;
+        
+        }
+
+        .ex7 button:hover{
+            background-color: #128075;
+        }
+
+        .ex7 a{
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            
+        }
+
+        .ex8{
+            background-color: white;
+            width: 97%;
+            height: 190px;
+            border-radius: 5px;
+            border-left: 4px solid cyan;
+            margin-left: 15px;
+            position: relative;
+            bottom: 45px;
+        }
+
+        .ex8 pre{
+            position: relative;
+            right: 230px;
+            top: 7px;
+        }
+
+        .con{
+            background-color: black;
+            height: 270px;
+            width: 100%;
+            border-radius: 5px;
+            flex: content;
+           
+        }
+
+
+          .con h2 {
+            margin-top: 70px;
+            color:cyan;
+            margin-left: 15px;
+            position: relative;
+            top: 20px;
+            
+          }
+          .con p{
+            color: white;
+            margin-left: 15px;
+            position: relative;
+            top: 20px;
+          }
+
+          .con2{
+            background-color: transparent;
+            width: 30%;
+            height: 200px;
+            position: relative;
+            left: 360px;
+            bottom: 200px;
+          }
+
+          .con2 h2{
+            position: relative;
+            top: 1px;
+          }
+
+          .con2 a{
+            position: relative;
+            top: 22px;
+            left: 15px;
+            letter-spacing: 1px;
+            text-decoration: none;
+            color: white;
+
+          }
+
+          .con2 a:hover{
+            color:rgb(96, 96, 235);
+
+          }
+
+         .con3{
+            background-color: transparent;
+            width: 270px;
+            position: relative;
+            left: 310px;
+            bottom: 118px;
+         }
+
+         .copyright{
+            background-color: transparent;
+            width: 340px;
+            position: relative;
+            right: 60px;
+         }
+
+        
+
+     
+
+
+    
+       @media screen and (max-width: 600px) {
+  nav ul {
+    display: flex;
+    list-style-type: none;
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+    position: fixed;
+    left: 40px;
+
+  }
+
+  
+  
+  nav li {
+    margin-right: 33px; /* Adjust the spacing as needed */
+    text-align: center;
+  }
+  
+  #menu {
+    width:60%;
+    height: 450px;
+    margin-top: 5px;
+    
+}
+
+#menu-icon {
+    display: inline;
+    position: fixed;
+    top: 80px; /* adjust this value based on your header height */
+    left: 0px;
+    z-index: 1000;
+    background-color: #333;
+    padding-top: 10px;
+    padding-left: 18px;
+    padding-right: 10px;
+    padding-bottom: 9px;
+    text-align: center;
+    overflow: hidden;
+    margin-top: 0px;
+    cursor: pointer;
+   
+    
+    
+    
+  }
+    header h1{
+    position: relative;
+    right: 23px;
+    }
+
+    .elements {
+        margin-left: 0px;
+        overflow: block;
+        width: 90%;
+        font-size: 20px;
+        position: relative;
+        top: 0px;
+        
+    }
+
+    .elements p{
+        font-size: 16px;
+    }
+
+    .elements-2{
+        width: 95%;
+        height: 2600px;
+        font-size: 14px;
+        margin-top: 20px;
+        
+        
+        
+    }
+
+    .elements-2 li{
+        line-height: 30px;
+        font-size: 16px;
+    }
+
+    .elements-2 h2{
+        font-size: 25px;
+    }
+
+    .ex1{
+        height: 175px;
+    }
+
+    .ex1 button{
+        position: relative;
+        right: 4px;
+        top: 73px;
+    }
+
+    .ex2{
+        width: 88%;
+    }
+    .ex2 pre{
+        position: relative;
+        right: 220px;
+    }
+
+    .ex3{
+        height: 375px;
+    }
+
+    .ex3 button{
+        position: relative;
+        top: 272px;
+        right: 4px;
+    }
+
+    .ex4{
+        width: 88%;
+        height: 258px;
+    }
+    .ex4 pre{
+        position: relative;
+        right: 220px;
+    }
+
+    .ex5{
+        height: 280px;
+    }
+
+    .ex5 button{
+        position: relative;
+        top: 175px;
+        right: 4px;
+    }
+
+    .ex6{
+        width: 88%;
+        height: 160px;
+    }
+
+    .ex6 pre{
+        position: relative;
+        right: 220px; 
+    }
+
+    .ex7{
+        height: 280px;
+    }
+
+    .ex7 button{
+        position: relative;
+        top: 175px;
+        right: 4px;
+        
+    }
+
+    .ex8{
+        width: 88%;
+        height: 160px;
+    }
+
+    .ex8 pre{
+        position: relative;
+        right: 220px; 
+    }
+
+    .con{
+        height: 440px;
+        width: 100%;
+        text-align: center;
+        position: relative;
+        right: 0px;
+        
+    }
+
+    .con2{
+        width: 100%;
+        left: -15px;
+        bottom: 0;
+    }
+
+    .con3{
+        width: 100%;
+        left: -5px;
+        bottom: 0;
+    }
+
+    .copyright{
+        left: -5px;
+        bottom: 0;
+
+    }
+
+
+
+    
+
+
+}
+
+
+      
+</style>
+</head>
+<body>
+    <header>
+        <h1>CODE WORLD</h1>
+    </header>
+    <nav>
+        <ul>
+            <li id="menu-icon" onclick="toggleMenu()">☰</li>
+            <li><a href="htmlpage1.html" target="_blank">HTML</a></li>
+            <li><a href="css1.html" target="_blank">CSS</a></li>
+            <li><a href="javascript1.html" target="_blank">JAVASCRIPT</a></li>
+            <li><a href="python1.html" target="_blank">PYTHON</a></li>
+            <li><a href="index.html"><i class="fas fa-home"></i></a></li>
+            <li class="login"><a href="#">LOGIN</a></li>
+        
+    
+        </ul>
+    </nav>
+
+    
+    <div class="elements">
+        <h2>HTML Paragraphs</h2>
+        <p>A paragraph always starts on a new line, and is usually a block of text.</p>
+
+        <div class="elements-2">
+            <div class="HTML Paragraphs">
+                <h2>HTML Paragraphs</h2>
+                <p>The HTML <span style="color:red;">&lt;p&gt;</span> element defines a paragraph.</p>
+                <p>A paragraph always starts on a new line, and browsers automatically add some white space (a margin) before and after a paragraph.</p>
+
+                <div class="ex1">
+                    <h3>Example</h3>
+                    <button type="button"><a href="The style Attribute.html" target="black">Try it Yourself</a></button>
+
+                    <div class="ex2">
+                        <pre>
+                            <span style="color:darkred;">&lt;p&gt;</span>This is a paragraph.<span style="color:darkred;">&lt;/p&gt;</span>
+                            <span style="color:darkred;">&lt;p&gt;</span>This is another paragraph.<span style="color:darkred;">&lt;/p&gt;</span>
+
+                        </pre>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="HTMLDisplay">
+                <h2>HTML Display</h2>
+                <p>You cannot be sure how HTML will be displayed.</p>
+                <p>Large or small screens, and resized windows will create different results.</p>
+                <p>With HTML, you cannot change the display by adding extra spaces or extra lines in your HTML code.</p>
+                <p>The browser will automatically remove any extra spaces and lines when the page is displayed:</p>
+
+                <div class="ex3">
+                    <h3>Example</h3>
+                    <button type="button"><a href="The style Attribute.html" target="black">Try it Yourself</a></button>
+
+                    <div class="ex4">
+                        <pre>
+                            <span style="color:darkred;">&lt;p&gt;</span>
+                             This paragraph
+                             contains a lot of lines
+                             in the source code,
+                             but the browser
+                             ignores it.
+                            <span style="color:darkred;">&lt;/p&gt;</span>
+
+                            <span style="color:darkred;">&lt;p&gt;</span>
+                             This paragraph
+                             contains         a lot of spaces
+                             in the source         code,
+                             but the        browser
+                             ignores it.
+                            <span style="color:darkred;">&lt;/p&gt;</span>
+
+                        </pre>
+                    </div>
+                </div>
+            </div>
+            <hr style="margin-top:25px;">
+
+            <div class="HTMLLineBreaks">
+                <h2>The Poem Problem</h2>
+                <p>This poem will display on a single line:</p>
+                
+
+                <div class="ex5">
+                    <h3>Example</h3>
+                    <button type="button"><a href="The style Attribute.html" target="black">Try it Yourself</a></button>
+                    <div class="ex6">
+                        <pre>
+                            <span style="color:darkred;">&lt;p&gt;</span>
+                             My Bonnie lies over the ocean.
+
+                             My Bonnie lies over the sea.
+
+                             My Bonnie lies over the ocean.
+
+                             Oh, bring back my Bonnie to me.
+                            <span style="color:darkred;">&lt;/p&gt;</span>
+
+
+                        </pre>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="SolutionTheHTMLElement">
+                <h2>Solution - The HTML &lt;pre&gt; Element</h2>
+                <p>The HTML <span style="color:red;">&lt;pre&gt;</span> element defines preformatted text.</p>
+                <p>The text inside a <span style="color:red;">&lt;pre&gt;</span> element is displayed in a fixed-width font (usually Courier), and it preserves both spaces and line breaks:</p>
+
+                <div class="ex7">
+                    <h3>Example</h3>
+                    <button type="button"><a href="The style Attribute.html" target="black">Try it Yourself</a></button>
+                    <div class="ex8">
+                        <pre>
+                            <span style="color:darkred;">&lt;pre&gt;</span>
+                             My Bonnie lies over the ocean.
+
+                             My Bonnie lies over the sea.
+
+                             My Bonnie lies over the ocean.
+
+                             Oh, bring back my Bonnie to me.
+                            <span style="color:darkred;">&lt;/pre&gt;</span>
+
+                        </pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <div class="con">
+                    <h2>Contact Information</h2>
+                    <p><i class="fas fa-envelope"></i> Email: karanarole2786@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> Phone: +91 9082436367</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Mumbai, Maharashtra</p>
+        
+                    <div class="con2">
+                        <h2>Social Media</h2>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+                        <a href="#" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        
+                        <div class="con3">
+                        <h2>Quick Links</h2>
+                        <a href="#"><i class="fas fa-home"></i> Home</a>
+                        <a href="#"><i class="fas fa-info-circle"></i> About Us</a>
+                        <a href="#"><i class="fas fa-envelope"></i> Contact</a>
+        
+                            
+                        </div>
+                        <div class="copyright">
+                            <p>&copy; 2023 Code World. All rights reserved.</p>
+                       </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+
+        <!--main-->
+        </div>
+    </div>
+
+   
+
+    
+    
+   
+    <div id="menu">
+        <a href="#html-attributes" style="font-size:25px;color:black;">HTML Tutorial</a>
+        <a href="htmlpage1.html">HTML Introduction</a>
+        <a href="htmlpage2.html">HTML Element</a>
+        <a href="htmlpage3.html">HTML Attributes</a>
+        <a href="htmlpage4.html">HTML Heading</a>
+        <a href="htmlpage5.html">HTML paregraphs</a>
+        <a href="htmlpage6.html">HTML Style</a>
+        <a href="htmlpage7.html">HTML Formatting</a>
+        <a href="htmlpage8.html">HTML Quotation</a>
+        <a href="htmlpage9.html">HTML Comments</a>
+        <a href="htmlpage11.html">HTML Colors</a>
+        <a href="htmlpage12.html">HTML Css</a>
+        <a href="htmlpage13.html">HTML Links</a>
+        <a href="htmlpage14.html">HTML Images</a>
+        <a href="htmlpage15.html">HTML Favicon</a>
+        <a href="htmlpage16.html">HTML Page Title</a>
+        <a href="htmlpage17.html">HTML Tables</a>
+        <a href="htmlpage18.html">HTML Lists</a>
+        <a href="htmlpage19.html">HTML Block & Inline</a>
+        <a href="htmlpage20.html">HTML Div</a>
+        <a href="htmlpage21.html">HTML Classes</a>
+        <a href="htmlpage22.html">HTML Id</a>
+        <a href="htmlpage23.html">HTML Iframe</a>
+        <a href="htmlpage24.html">HTML Javascript</a>
+        <a href="htmlpage25.html">HTML File Paths</a>
+        <a href="htmlpage26.html">HTML Head</a>
+        <a href="htmlpage27.html">HTML Layout</a>
+        <a href="htmlpage28.html">HTML Responsive</a>
+        <a href="htmlpage29.html">HTML Computercode</a>
+        <a href="htmlpage30.html">HTML Semantics</a>
+        <a href="htmlpage31.html">HTML Style Guide</a>
+        <a href="htmlpage32.html">HTML Entities</a>
+        <a href="htmlpage33.html">HTML Symbols</a>
+        <a href="htmlpage34.html">HTML Emojis</a>
+        <a href="htmlpage35.html">HTML Charsets</a>
+        <a href="htmlpage36.html">HTML URL Ecode</a>
+        <a href="htmlpage37.html" style="font-size:25px;color:black;">HTML Forms</a>
+        <a href="htmlpage38.html">HTML Forms</a>
+        <a href="htmlpage39.html">HTML Attributes</a>
+        <a href="htmlpage40.html">HTML </a>
+        <a href="htmlpage41.html">HTML Attributes</a>
+        <a href="htmlpage42.html">HTML Form Attributes</a>
+        <a href="htmlpage43.html">HTML Input Type</a>
+        <a href="htmlpage44.html">HTML Input Attributes</a>
+        <a href="htmlpage45.html">HTML Input Form Attributes</a>
+        <a href="htmlpage46.html"style="font-size:25px;color:black;">HTML Media</a>
+        <a href="htmlpage47.html">HTML Video</a>
+        <a href="htmlpage48.html">HTML Audio</a>
+        <a href="htmlpage49.html">HTML Plug-ins</a>
+        <a href="htmlpage50.html"style="font-size:25px;color:black;">HTML Reference</a>
+        <a href="htmlpage51.html">HTML Tag List</a>
+        <a href="htmlpage52.html">HTML Color</a>
+        <!-- Add more menu items as needed -->
+    </div>
+
+
+    
+
+   
+   
+
+
+
+    
+    <script>
+        let likescount = 0;
+        let isliked = false;
+        const likescountElement = document.getElementById('Likes-count');
+
+        function toggleLikes() {
+            if (!isliked) {
+                likescount++;
+                likescountElement.textContent = likescount;
+                likescountElement.style.display = 'inline';
+                isliked = true;
+            }
+        }
+
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+        }
+    </script>
+
+    
+</body>
+</html>
