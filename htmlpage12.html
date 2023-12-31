@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>HTML Tutorial</title>
+<style>
+    body, h1, h2, ul, li {
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* Basic styles */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+    }
+    
+    header {
+        background-color: #009688;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        position: fixed;
+        width: 100%;
+        height: 50px;
+        top: 0;
+        z-index: 1000;
+       
+    }
+    
+    nav ul {
+        list-style-type: none;
+        background-color: #333;
+        overflow: hidden;
+        position: fixed;
+        top: 80px; /* adjust this value based on your header height */
+        width: 100%;
+        z-index: 1000;
+       
+       
+    }
+    
+    nav li {
+        float: left;
+        
+    }
+    
+    .like {
+        color: red;
+        cursor: pointer;
+        margin-top: 8px;
+        margin-left: 48px;
+        font-size: 20px;
+        background-color: black;
+        width: 50px;
+        text-align: center;
+        border-radius: 10px;
+    
+    }
+    
+    .like:hover{
+        box-shadow: 0 0 5px red,0 0 25px red,0 0 5px cyan,0 0 1px cyan,0 0 0px cyan;
+    
+    }
+    
+    
+    
+    nav a {
+        display: block;
+        color: #fff;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        position: relative;
+        left: 0px;
+    }
+    
+    nav a:hover {
+        background-color: #555;
+        color: white;
+        transition: background-color 0.3s;
+        
+    }
+    
+    #login {
+        margin-left: 1500px;
+        margin-top: 120px;
+        font-family: Arial, sans-serif;
+        
+      }
+    
+      #login:hover {
+        background-color: #555;
+        width: 50px;
+      }
+    
+      .login {
+        float:right
+    
+      }
+    
+      .login a{
+        background-color: #009688;
+        color: white;
+        border: none;
+        padding: 5px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 8px 50px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+      #menu {
+        position: fixed;
+        left: 0;
+        top: 125px;
+        width: 20%;
+        height: 467px;
+        background-color: rgb(214, 210, 210);
+        color: #fff;
+        overflow-y: auto;
+        padding-top: 2px;
+      }
+      
+      #menu a {
+        display: block;
+        padding: 12px;
+        color: #333;
+        text-decoration: none;
+        transition: background-color 0.3s;
+      }
+      
+      #menu a:hover {
+        background-color: #555;
+        color: white;
+      }
+
+      #menu-icon{
+        display: none;
+        color: #f0f0f0;
+        font-size: 20px;
+        position: relative;
+        left: 20px;
+        top: 8px;
+      }
+
+      .elements {
+        flex: 1;
+        margin-top: 130px; /* Adjust the margin as needed */
+        margin-left: 250px; /* Adjust the margin as needed */
+        padding: 20px;
+        background-color: #ffffff; /* Set your desired background color */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a shadow for separation */
+    }
+
+      .elements{
+        flex: 1;
+            width: 77%;
+            font-size: 28px;
+            margin-top: 132px; /* Adjust the margin as needed */
+            padding: 10px;
+            position:absolute;
+            left: 10px;
+            background-color: #ffffff; /* Set your desired background color */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a shadow for separation */
+        }
+    
+        .elements p{
+            font-size: 18px;
+           
+        }
+
+        .elements-2{
+            width: 98%;
+            height: 4910px;
+            font-size: 16px;
+            margin-top: 15px; /* Adjust the margin as needed */
+            padding: 10px;
+            position:absolute;
+            left: 0px;
+            background-color: #ffffff; /* Set your desired background color */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a shadow for separation */
+
+        }
+
+        .elements-2 ul{
+            margin-top: 20px;
+            margin-left: 40px;
+        }
+
+        .elements-2 li{
+            line-height: 30px;
+            font-size: 17px;
+        }
+        .elements-2 h3{
+            font-size: 28px;
+            position: relative;
+            top: 10px;
+            left: 15px;
+            font-size: 25px;
+
+        }
+
+        .elements-2 h2{
+            font-size: 30px;
+            margin-top: 20px;
+        }
+
+        .UsingCSS{
+            margin-top: 30px;
+        }
+
+        .InlineCSS{
+            margin-top: 30px; 
+        }
+
+        .ex1{
+            background-color:  #dad6d6;
+            width: 100%;
+            height: 180px;
+            border-radius: 5px;
+        }
+
+        .ex1 button{
+            margin-left: 18px;
+            width: 130px;
+            height: 30px;
+            border-radius: 5px;
+            border: none;
+            background-color: #009688;
+            position: relative;
+            top: 80px;
+        
+        }
+
+        .ex1 button:hover{
+            background-color: #128075;
+        }
+
+        .ex1 a{
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            
+        }
+
+        .ex2{
+            background-color: white;
+            width: 97%;
+            height: 65px;
+            margin-left: 15px;
+            border-left: 4px solid cyan;
+            border-radius: 5px;
+            position: relative;
+            bottom: 45px;
+        }
+
+        .ex2 pre{
+            position: relative;
+            top: 10px;
+            right: 235px;
+            line-height: 22px;
+        }
+
+        .ex2 p{
+            display: none;
+           
+        }
+
+        .InternalCSS{
+            margin-top: 35px;
+        }
+
+        .ex3{
+            background-color:  #dad6d6;
+            width: 100%;
+            height: 485px;
+            border-radius: 5px;
+        }
+
+        .ex3 button{
+            margin-left: 18px;
+            width: 130px;
+            height: 30px;
+            border-radius: 5px;
+            border: none;
+            background-color: #009688;
+            position: relative;
+            top: 385px;
+        
+        }
+
+        .ex3 button:hover{
+            background-color: #128075;
+        }
+
+        .ex3 a{
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            
+        }
+
+        .ex4{
+            background-color: white;
+            width: 97%;
+            height: 370px;
+            margin-left: 15px;
+            border-left: 4px solid cyan;
+            border-radius: 5px;
+            position: relative;
+            bottom: 45px;
+        }
+
+        .ex4 pre{
+            position: relative;
+            top: 10px;
+            right: 235px;
+            line-height: 22px;
+        }
+
+        .ex4 p{
+            display: none;
+        }
+
+        .ex5{
+            background-color:  #dad6d6;
+            width: 100%;
+            height: 410px;
+            border-radius: 5px;
+        }
+
+        .ex5 button{
+            margin-left: 18px;
+            width: 130px;
+            height: 30px;
+            border-radius: 5px;
+            border: none;
+            background-color: #009688;
+            position: relative;
+            top: 310px;
+        
+        }
+
+        .ex5 button:hover{
+            background-color: #128075;
+        }
+
+        .ex5 a{
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            
+        }
+
+        .ex6{
+            background-color: white;
+            width: 97%;
+            height: 290px;
+            margin-left: 15px;
+            border-left: 4px solid cyan;
+            border-radius: 5px;
+            position: relative;
+            bottom: 45px;
+        }
+
+        .ex6 pre{
+            position: relative;
+            top: 5px;
+            right: 265px;
+            line-height: 23px;
+        }
+
+        .ex6 p{
+            display: none;
+        }
+
+        .style{
+            margin-top: 30px;
+        }
+
+        .CSSColorsFontsandSizes{
+            margin-top: 30px;
+        }
+
+        .ex7{
+            background-color:  #dad6d6;
+            width: 100%;
+            height: 700px;
+            border-radius: 5px;
+        }
+
+        .ex8{
+            background-color: white;
+            width: 97%;
+            height: 550px;
+            margin-left: 15px;
+            border-left: 4px solid cyan;
+            border-radius: 5px;
+            position: relative;
+            bottom: 50px;
+        }
+
+        .ex8 pre{
+            position: relative;
+            top: 10px;
+            right: 235px;
+            line-height: 23px;
+        }
+
+        .file1{
+            background-color:  #dad6d6;
+            width: 100%;
+            height: 300px;
+            border-radius: 5px;
+        }
+
+        .file2{
+            background-color: white;
+            width: 97%;
+            height: 230px;
+            margin-left: 15px;
+            border-left: 4px solid cyan;
+            border-radius: 5px;
+            position: relative;
+            bottom: 0px;
+        }
+
+        .file2 pre{
+            position: relative;
+            top: 10px;
+            right: 305px;
+            line-height: 23px;
+        }
+
+        .ex7 button{
+            margin-left: 18px;
+            width: 130px;
+            height: 30px;
+            border-radius: 5px;
+            border: none;
+            background-color: #009688;
+            position: relative;
+            top: 560px;
+        
+        }
+
+        .ex7 button:hover{
+            background-color: #128075;
+        }
+
+        .ex7 a{
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            
+        }
+
+        .CSSBorder{
+            margin-top: 35px;
+        }
+
+        .ex9{
+            background-color:  #dad6d6;
+            width: 100%;
+            height: 190px;
+            border-radius: 5px;
+        }
+
+        .ex9 button{
+            margin-left: 18px;
+            width: 130px;
+            height: 30px;
+            border-radius: 5px;
+            border: none;
+            background-color: #009688;
+            position: relative;
+            top: 90px;
+        
+        }
+
+        .ex9 button:hover{
+            background-color: #128075;
+        }
+
+        .ex9 a{
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            
+        }
+
+        .ex10{
+            background-color: white;
+            width: 97%;
+            height: 75px;
+            margin-left: 15px;
+            border-left: 4px solid cyan;
+            border-radius: 5px;
+            position: relative;
+            bottom: 45px;
+        }
+
+        .ex10 pre{
+            position: relative;
+            top: 5px;
+            right: 268px;
+        }
+
+        .CSSPadding{
+            margin-top: 35px;
+        }
+
+        .ex11{
+            background-color:  #dad6d6;
+            width: 100%;
+            height: 205px;
+            border-radius: 5px;
+        }
+
+        .ex11 button{
+            margin-left: 18px;
+            width: 130px;
+            height: 30px;
+            border-radius: 5px;
+            border: none;
+            background-color: #009688;
+            position: relative;
+            top: 105px;
+        
+        }
+
+        .ex11 button:hover{
+            background-color: #128075;
+        }
+
+        .ex11 a{
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            
+        }
+
+        .ex12{
+            background-color: white;
+            width: 97%;
+            height: 90px;
+            margin-left: 15px;
+            border-left: 4px solid cyan;
+            border-radius: 5px;
+            position: relative;
+            bottom: 45px;
+        }
+
+        .ex12 pre{
+            position: relative;
+            top: 5px;
+            right: 270px;
+        }
+
+        .CSSMargin{
+            margin-top: 30px;
+        }
+
+        .ex13{
+            background-color:  #dad6d6;
+            width: 100%;
+            height: 205px;
+            border-radius: 5px;
+        }
+
+        .ex13 button{
+            margin-left: 18px;
+            width: 130px;
+            height: 30px;
+            border-radius: 5px;
+            border: none;
+            background-color: #009688;
+            position: relative;
+            top: 105px;
+        
+        }
+
+        .ex13 button:hover{
+            background-color: #128075;
+        }
+
+        .ex13 a{
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            
+        }
+
+        .ex14{
+            background-color: white;
+            width: 97%;
+            height: 90px;
+            margin-left: 15px;
+            border-left: 4px solid cyan;
+            border-radius: 5px;
+            position: relative;
+            bottom: 45px;
+        }
+
+        .ex14 pre{
+            position: relative;
+            top: 5px;
+            right: 270px;
+        }
+
+        .con{
+            background-color: black;
+            height: 270px;
+            width: 100%;
+            border-radius: 5px;
+            flex: content;
+           
+        }
+
+
+          .con h2 {
+            margin-top: 70px;
+            color:cyan;
+            margin-left: 15px;
+            position: relative;
+            top: 20px;
+            
+          }
+          .con p{
+            color: white;
+            margin-left: 15px;
+            position: relative;
+            top: 20px;
+          }
+
+          .con2{
+            background-color: transparent;
+            width: 30%;
+            height: 200px;
+            position: relative;
+            left: 360px;
+            bottom: 200px;
+          }
+
+          .con2 h2{
+            position: relative;
+            top: -5px;
+          }
+
+          .con2 a{
+            position: relative;
+            top: 15px;
+            left: 15px;
+            letter-spacing: 1px;
+            text-decoration: none;
+            color: white;
+
+          }
+
+          .con2 a:hover{
+            color:rgb(96, 96, 235);
+
+          }
+
+         .con3{
+            background-color: transparent;
+            width: 270px;
+            position: relative;
+            left: 310px;
+            bottom: 118px;
+         }
+
+         .con3 h2{
+            position: relative;
+            top: -10px;
+             
+         }
+
+        .con3 a{
+            position: relative;
+            top: 8px;
+            
+        }
+
+         .copyright{
+            background-color: transparent;
+            width: 340px;
+            position: relative;
+            right: 60px;
+         }
+
+
+
+     
+
+
+    
+       @media screen and (max-width: 600px) {
+  nav ul {
+    display: flex;
+    list-style-type: none;
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+    position: fixed;
+    left: 40px;
+
+  }
+
+  
+  
+  nav li {
+    margin-right: 33px; /* Adjust the spacing as needed */
+    text-align: center;
+  }
+  
+  #menu {
+    width:60%;
+    height: 450px;
+    margin-top: 5px;
+    
+}
+
+#menu-icon {
+    display: inline;
+    position: fixed;
+    top: 80px; /* adjust this value based on your header height */
+    left: 0px;
+    z-index: 1000;
+    background-color: #333;
+    padding-top: 10px;
+    padding-left: 18px;
+    padding-right: 10px;
+    padding-bottom: 9px;
+    text-align: center;
+    overflow: hidden;
+    margin-top: 0px;
+    cursor: pointer;
+   
+    
+    
+    
+  }
+    header h1{
+    position: relative;
+    right: 23px;
+    }
+
+    .elements {
+        margin-left: 0px;
+        overflow: block;
+        width: 90%;
+        font-size: 20px;
+        position: relative;
+        top: 0px;
+        
+    }
+
+    .elements p{
+        font-size: 16px;
+    }
+
+    .elements-2{
+        width: 95%;
+        height: 6080px;
+        font-size: 14px;
+        margin-top: 20px;
+        
+        
+        
+    }
+
+    .elements-2 li{
+        line-height: 30px;
+        font-size: 16px;
+    }
+
+    .elements-2 h2{
+        font-size: 25px;
+    }
+
+    .ex1{
+        height: 235px;
+    }
+
+    .ex1 button{
+        position: relative;
+        top: 135px;
+        right: 4px;
+    }
+
+    .ex2{
+        width: 89%;
+        height: 120px;
+        position: relative;
+        bottom: 30px;
+    }
+
+    .ex2 pre{
+        display: none;
+       
+    }
+
+    .ex2 p{
+        display: inline;
+        font-family: monospace;
+        font-size: 16px;
+        position: relative;
+        top: 10px;
+        left: 7px;
+
+    }
+
+    .ex3{
+        height: 505px;
+
+    }
+
+    .ex3 button{
+        position: relative;
+        top: 405px;
+        right: 4px;
+    }
+
+    .ex4{
+        width: 89%;
+        height: 390px;
+        position: relative;
+        bottom: 30px;
+    }
+
+    .ex4 pre{
+        display: none;
+    }
+
+    .ex4 p{
+        display: inline;
+        font-family: monospace;
+        font-size: 15px;
+        position: relative;
+        top: 10px;
+        left: 7px;
+        line-height: 21px;
+
+    }
+
+    .ex5{
+        height: 405px;
+    }
+
+    .ex5 button{
+        position: relative;
+        right: 4px;
+        top: 305px;
+    }
+
+    .ex6{
+        width: 89%;
+        position: relative;
+        bottom: 30px;
+    }
+
+    .ex6 pre{
+        position: relative;
+        right: 245px;
+        display: none;
+        
+    }
+
+    .ex6 p{
+        display: inline;
+        font-family: monospace;
+        font-size: 15px;
+        line-height: 21px;
+        position: relative;
+        left: 5px;
+        top: 5px;
+    }
+
+    .ex7{
+        height: 712px;
+    }
+
+    .ex8{
+        width: 89%;
+    }
+
+    .ex8 pre{
+        position: relative;
+        right: 235px;
+        font-size: 15px;
+    }
+
+    .file2{
+        width: 89%;
+    }
+
+    .file2 pre{
+        position: relative;
+        right: 280px;
+        font-size: 14.9px;
+    }
+
+    .ex7 button{
+        position: relative;
+        right: 4px;
+    }
+    
+    .ex10{
+        width: 89%;
+    }
+
+    .ex10 pre{
+        position: relative;
+        right: 270px;
+        font-size: 15px;
+    }
+
+    .ex9 button{
+        position: relative;
+        right: 4px;
+    }
+
+    .ex11 button{
+        position: relative;
+        right: 4px;
+    }
+
+    .ex12{
+        width: 89%;
+    }
+
+    .ex12 pre{
+        position: relative;
+        right: 270px;
+        font-size: 15px;
+    }
+
+    .CSSBorder{
+        margin-top: 30px;
+    }   
+    
+    .ex14{
+        width: 89%;
+    }
+
+    .ex14 pre{
+        position: relative;
+        right: 270px;
+        font-size: 15px;
+    }
+
+    .con{
+        height: 440px;
+        width: 100%;
+        text-align: center;
+        position: relative;
+        right: 0px;
+        
+    }
+
+    .con2{
+        width: 100%;
+        left: -15px;
+        bottom: 0;
+    }
+
+    .con3{
+        width: 100%;
+        left: -5px;
+        bottom: 0;
+    }
+
+    .copyright{
+        left: -5px;
+        bottom: 0;
+
+    }
+
+
+                            
+                           
+                        
+   
+
+
+
+
+}
+
+
+      
+</style>
+</head>
+<body>
+    <header>
+        <h1>CODE WORLD</h1>
+    </header>
+    <nav>
+        <ul>
+            <li id="menu-icon" onclick="toggleMenu()">☰</li>
+            <li><a href="htmlpage1.html" target="_blank">HTML</a></li>
+            <li><a href="css1.html" target="_blank">CSS</a></li>
+            <li><a href="javascript1.html" target="_blank">JAVASCRIPT</a></li>
+            <li><a href="python1.html" target="_blank">PYTHON</a></li>
+            <li><a href="index.html"><i class="fas fa-home"></i></a></li>
+            <li class="login"><a href="#">LOGIN</a></li>
+        
+    
+        </ul>
+    </nav>
+
+    
+    <div class="elements">
+        <h2>HTML Styles - CSS</h2>
+        <p>A paragraph always starts on a new line, and is usually a block of text.</p>
+
+        <div class="elements-2">
+            <div class="WhatisCSS">
+                <h2>What is CSS?</h2>
+                <p>Cascading Style Sheets (CSS) is used to format the layout of a webpage.</p>
+                <p>With CSS, you can control the color, font, the size of text, the spacing between elements, how elements are positioned and laid out, what background images or background colors are to be used, different displays for different devices and screen sizes, and much more!</p>
+                <p><b>Tip:</b> The word <b>cascading</b> means that a style applied to a parent element will also apply to all children elements within the parent. So, if you set the color of the body text to "blue", all headings, paragraphs, and other text elements within the body will also get the same color (unless you specify something else)!</p>
+            </div>
+            <hr>
+
+            <div class="UsingCSS">
+                <h2>Using CSS</h2>
+                <p>CSS can be added to HTML documents in 3 ways:</p>
+
+                 <ul>
+                    <li><b>Inline -</b> by using the <span style="color: red;font-family:monospace">style</span> attribute inside HTML elements</li>
+                    <li><b>Internal -</b> by using a <span style="color: red;font-family:monospace">&lt;style&gt;</span> element in the <span style="color: red;font-family:monospace">&lt;head&gt;</span> section</li>
+                    <li><b>External -</b> by using a <span style="color: red;font-family:monospace">&lt;link&gt;</span> element to link to an external CSS file</li>
+                 </ul>
+                 <p>The most common way to add CSS, is to keep the styles in external CSS files. However, in this tutorial we will use inline and internal styles, because this is easier to demonstrate, and easier for you to try it yourself.</p>
+
+            </div>
+            <hr style="margin-top: 20px;">
+
+            <div class="InlineCSS">
+                <h2>Inline CSS</h2>
+                <p>An inline CSS is used to apply a unique style to a single HTML element.</p>
+                <p>An inline CSS uses the <span style="color: red;font-family:monospace">style</span> attribute of an HTML element.</p>
+                <p>The following example sets the text color of the <span style="color: red;font-family:monospace">&lt;h1&gt;</span> element to blue, and the text color of the <span style="color: red;font-family:monospace">&lt;p&gt;</span> element to red:</p>
+
+                <div class="ex1">
+                    <h3>Example</h3>
+                    <button type="button"><a href="The style Attribute.html" target="black">Try it Yourself</a></button>
+    
+                    <div class="ex2">
+                        <pre>
+                            <span style="color: darkred;">&lt;h1</span> <span style="color:blue;">style="color:blue;"</span><span style="color: darkred;">&gt;</span>A Blue Heading.<span style="color: darkred;">&lt;h1&gt;</span>
+                            <span style="color: darkred;">&lt;p</span> <span style="color:blue;">style="color:red;"</span><span style="color: darkred;">&gt;</span>A red paragraph.<span style="color: darkred;">&lt;/p&gt;</span>
+                        </pre>
+
+                        <p>
+                            <span style="color: darkred;">&lt;h1</span> <span style="color:blue;">style="color:blue;"</span><span style="color: darkred;">&gt;</span>A Blue Heading.<span style="color: darkred;">&lt;h1&gt;</span><br><br>
+                            <span style="color: darkred;">&lt;p</span> <span style="color:blue;">style="color:red;"</span><span style="color: darkred;">&gt;</span>A red paragraph.<span style="color: darkred;">&lt;/p&gt;</span>
+                        </p>
+    
+                    </div>
+                </div>
+            </div>
+
+            <div class="InternalCSS">
+                <h2>Internal CSS</h2>
+                <p>An internal CSS is used to define a style for a single HTML page.</p>
+                <p>An internal CSS is defined in the <span style="color: red;font-family:monospace">&lt;head&gt;</span> section of an HTML page, within a <span style="color: red;font-family:monospace">&lt;style&gt;</span> element.</p>
+                <p>The following example sets the text color of ALL the <span style="color: red;font-family:monospace">&lt;h1&gt;</span> elements (on that page) to blue, and the text color of ALL the <span style="color: red;font-family:monospace">&lt;p&gt;</span> elements to red. In addition, the page will be displayed with a "powderblue" background color: </p>
+
+                <div class="ex3">
+                    <h3>Example</h3>
+                    <button type="button"><a href="The style Attribute.html" target="black">Try it Yourself</a></button>
+    
+                    <div class="ex4">
+                        <pre>
+                            <span style="color: darkred;">&lt;!DOCTYPE <span style="color: red;">html&gt;</span>
+                            <span style="color:darkred">&lt;html&gt;</span>
+                            <span style="color:darkred">&lt;head&gt;</span>
+                            <span style="color:darkred">&lt;style&gt;</span>
+                             <span style="color: darkred;">body</span> <span style="color: blue;">{background-color: powderblue;}</span>
+                             <span style="color: darkred;">h1</span>   <span style="color: blue;">{color: blue;}</span>
+                             <span style="color: darkred;">p</span>    <span style="color: blue;">{color: red;}</span>
+                            <span style="color:darkred">&lt;/style&gt;</span>
+                            <span style="color:darkred">&lt;/head&gt;</span>
+                            <span style="color:darkred">&lt;body&gt;</span>
+
+                            <span style="color: darkred;">&lt;h1&gt;</span><span style="color: black;">This is a heading</span><span style="color: darkred;">&lt;/h1&gt;</span>
+                            <span style="color: darkred;">&lt;p&gt;</span><span style="color: black;">This is a paragraph.</span><span style="color: darkred;">&lt;/p&gt;</span>
+
+                            <span style="color:darkred">&lt;/body&gt;</span>
+                            <span style="color:darkred">&lt;/html&gt;</span>
+                        </pre>
+
+
+                        <p>
+                            <span style="color: darkred;">&lt;!DOCTYPE <span style="color: red;">html&gt;</span><br>
+                            <span style="color:darkred">&lt;html&gt;</span><br>
+                            <span style="color:darkred">&lt;head&gt;</span><br>
+                            <span style="color:darkred">&lt;style&gt;</span><br>
+                            <span style="color: darkred;">body</span> <span style="color: blue;">{background-color: powderblue;}</span><br>
+                             <span style="color: darkred;">h1</span>   <span style="color: blue;">{color: blue;}</span><br>
+                             <span style="color: darkred;">p</span>    <span style="color: blue;">{color: red;}</span><br>
+                            <span style="color:darkred">&lt;/style&gt;</span><br>
+                            <span style="color:darkred">&lt;/head&gt;</span><br>
+                            <span style="color:darkred">&lt;body&gt;</span><br><br>
+
+                            <span style="color: darkred;">&lt;h1&gt;</span><span style="color: black;">This is a heading</span><span style="color: darkred;">&lt;/h1&gt;</span><br>
+                            <span style="color: darkred;">&lt;p&gt;</span><span style="color: black;">This is a paragraph.</span><span style="color: darkred;">&lt;/p&gt;</span><br><br>
+
+                            <span style="color:darkred">&lt;/body&gt;</span><br>
+                            <span style="color:darkred">&lt;/html&gt;</span>
+                        </p>
+
+
+                        
+    
+                    </div>
+                </div>
+
+                <div class="style">
+                    <h2>External CSS</h2>
+                    <p>An external style sheet is used to define the style for many HTML pages.</p>
+                    <p>To use an external style sheet, add a link to it in the <span style="color: red;">&lt;head&gt;</span> section of each HTML page:</p>
+                    <div class="ex5">
+                        <h3>Example</h3>
+                        <button type="button"><a href="The style Attribute.html" target="black">Try it Yourself</a></button>
+                        
+        
+                        <div class="ex6">
+                            <pre>
+                               <span style="color: darkred;">&lt;!DOCTYPE <span style="color: red;">html&gt;</span>
+                               <span style="color:darkred">&lt;html&gt;</span>
+                               <span style="color:darkred">&lt;head&gt;</span>
+                               <span style="color:darkred;">&lt;link rel</span><span style="color: blue;">="stylesheet"</span> <span style="color: darkred;">href</span><span style="color: blue;">="styles.css"</span><span style="color: darkred;">&gt;</span>
+                               <span style="color:darkred">&lt;/head&gt;</span>
+                               <span style="color:darkred">&lt;body&gt;</span>
+
+                               <span style="color: darkred;">&lt;h1&gt;</span><span style="color: black;">This is a heading</span><span style="color: darkred;">&lt;/h1&gt;</span>
+                               <span style="color: darkred;">&lt;p&gt;</span><span style="color: black;">This is a paragraph.</span><span style="color: darkred;">&lt;/p&gt;</span>
+
+                               <span style="color:darkred">&lt;/body&gt;</span>
+                               <span style="color:darkred">&lt;/html&gt;</span>
+                                
+                            </pre>
+
+                            <p>
+                                <span style="color: darkred;">&lt;!DOCTYPE <span style="color: red;">html&gt;</span><br>
+                                <span style="color:darkred">&lt;html&gt;</span><br>
+                                <span style="color:darkred">&lt;head&gt;</span><br>
+                                   <span style="color:darkred;">&lt;link rel</span><span style="color: blue;">="stylesheet"</span> <span style="color: darkred;">href</span><span style="color: blue;">="styles.css"</span><span style="color: darkred;">&gt;</span><br>
+                                <span style="color:darkred">&lt;/head&gt;</span><br>
+                                <span style="color:darkred">&lt;body&gt;</span><br><br>
+ 
+                                <span style="color: darkred;">&lt;h1&gt;</span><span style="color: black;">This is a heading</span><span style="color: darkred;">&lt;/h1&gt;</span><br>
+                                <span style="color: darkred;">&lt;p&gt;</span><span style="color: black;">This is a paragraph.</span><span style="color: darkred;">&lt;/p&gt;</span><br><br>
+ 
+                                <span style="color:darkred">&lt;/body&gt;</span><br>
+                                <span style="color:darkred">&lt;/html&gt;</span>
+                                 
+                             </p>
+                            
+        
+                        </div>
+                    </div>
+                    <p>The external style sheet can be written in any text editor. The file must not contain any HTML code, and must be saved with a .css extension.</p>
+                    <p>Here is what the "styles.css" file looks like:</p>
+
+                    <div class="styles.css">
+                        <div class="file1">
+                            <h3>"styles.css":</h3>
+                            
+            
+                            <div class="file2">
+                                <pre>
+                                    <span style="color: darkred;">body</span> {
+                                        <span style="color: blue;">background-color:</span>powderblue;
+                                    }
+                                    <span style="color: darkred;">h1</span> {
+                                        <span style="color: blue;">color:</span>blue;
+                                    }
+                                    <span style="color: darkred;">p</span> {
+                                        <span style="color: blue;">color:</span>red;
+                                    }
+
+                                </pre>
+            
+                            </div>
+                        </div>
+                    </div>
+                    <p style="margin-top: 30px;"><b>Tip:</b> With an external style sheet, you can change the look of an entire web site, by changing one file!</p>
+                </div>
+                <hr>
+                
+            </div>
+            
+
+            <div class="CSSColorsFontsandSizes">
+                <h2>CSS Colors, Fonts and Sizes</h2>
+                <p>Here, we will demonstrate some commonly used CSS properties. You will learn more about them later.</p>
+                <p>The CSS <span style="color: red;">color</span> property defines the text color to be used.</p>
+                <p>The CSS <span style="color: red;">font-family</span> property defines the font to be used.</p>
+                <p>The CSS <span style="color: red;">font-family</span> property defines the text size to be used.</p>
+
+
+                <div class="ex7">
+                    <h3>Example</h3>
+                    <p style="margin-left: 15px;">Use of CSS color, font-family and font-size properties:</p>
+                    <button type="button"><a href="The style Attribute.html" target="black">Try it Yourself</a></button>
+                    
+    
+                    <div class="ex8">
+                        <pre>
+                            <span style="color: darkred;">&lt;!DOCTYPE <span style="color: red;">html&gt;</span>
+                            <span style="color:darkred">&lt;html&gt;</span>
+                            <span style="color:darkred">&lt;head&gt;</span>
+                            <span style="color:darkred">&lt;style&gt;</span>
+                            <span style="color: darkred;">h1</span> {
+                                <span style="color: blue;">color: </span>blue;
+                                <span style="color: blue;">font-family: </span>verdana;
+                                <span style="color: blue;">font-size: </span>300%;
+                            }
+                            <span style="color: darkred;">p</span> {
+                                <span style="color: blue;">color: </span> red;
+                                <span style="color: blue;">font-family: </span>courier;
+                                <span style="color: blue;">font-size: </span>160%;
+                            }
+                            <span style="color:darkred">&lt;/style&gt;</span>
+                            <span style="color:darkred">&lt;/head&gt;</span>
+                            <span style="color:darkred">&lt;/body&gt;</span>
+
+                            <span style="color: darkred;">&lt;h1&gt;</span><span style="color: black;">is a heading</span><span style="color: darkred;">&lt;/h1&gt;</span>
+                            <span style="color: darkred;">&lt;p&gt;</span><span style="color: black;">This is a paragraph.</span><span style="color: darkred;">&lt;/p&gt;</span>
+
+                            <span style="color: darkred;">&lt;/body&gt;</span>
+                            <span style="color: darkred;">&lt;/html&gt;</span>
+
+
+
+                              
+                            
+                           
+                        </pre>
+    
+                    </div>
+                </div>
+
+                <div class="CSSBorder">
+                    <h2>CSS Border</h2>
+                    <p>The CSS <span style="color: red;">border</span> property defines a border around an HTML element.</p>
+                    <p><b>Tip:</b> You can define a border for nearly all HTML elements.</p>
+
+                    <div class="ex9">
+                        <h3>Example</h3>
+                        <button type="button"><a href="The style Attribute.html" target="black">Try it Yourself</a></button>
+        
+                        <div class="ex10">
+                            <pre>
+                                <span style="color: darkred;">p</span> {
+                                  <span style="color: blue;">border:</span>2px solid powderblue;
+                                }
+                            </pre>
+        
+                        </div>
+                    </div>
+                </div>
+
+                <div class="CSSPadding">
+                    <h2>CSS Padding</h2>
+                    <p>The CSS <span style="color: red;">padding</span> property defines a padding (space) between the text and the border.</p>
+
+                    <div class="ex11">
+                        <h3>Example</h3>
+                        <button type="button"><a href="The style Attribute.html" target="black">Try it Yourself</a></button>
+        
+                        <div class="ex12">
+                            <pre>
+                                <span style="color: darkred;">p</span> {
+                                  <span style="color: blue;">border:</span>2px solid powderblue;
+                                  <span style="color: blue;">padding:</span>30px;
+                                }
+                            </pre>
+        
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="CSSMargin">
+                    <h2>CSS Margin</h2>
+                    <p>The CSS <span style="color: red;">margin</span> property defines a margin (space) outside the border.
+
+                    <div class="ex13">
+                        <h3>Example</h3>
+                        <button type="button"><a href="The style Attribute.html" target="black">Try it Yourself</a></button>
+        
+                        <div class="ex14">
+                            <pre>
+                                <span style="color: darkred;">p</span> {
+                                  <span style="color: blue;">border:</span>2px solid powderblue;
+                                  <span style="color: blue;">margin:</span>50px;
+                                }
+                            </pre>
+        
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+            <div class="footer">
+                <div class="con">
+                    <h2>Contact Information</h2>
+                    <p><i class="fas fa-envelope"></i> Email: karanarole2786@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> Phone: +91 9082436367</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Mumbai, Maharashtra</p>
+        
+                    <div class="con2">
+                        <h2>Social Media</h2>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+                        <a href="#" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        
+                        <div class="con3">
+                        <h2>Quick Links</h2>
+                        <a href="#"><i class="fas fa-home"></i> Home</a>
+                        <a href="#"><i class="fas fa-info-circle"></i> About Us</a>
+                        <a href="#"><i class="fas fa-envelope"></i> Contact</a>
+        
+                            
+                        </div>
+                        <div class="copyright">
+                            <p>&copy; 2023 Code World. All rights reserved.</p>
+                       </div>
+                        
+                    </div>
+                </div>
+            </div>
+        <!--main-->
+        </div>
+    </div>
+
+    
+    
+   
+    <div id="menu">
+        <a href="#html-attributes" style="font-size:25px;color:black;">HTML Tutorial</a>
+        <a href="htmlpage1.html">HTML Introduction</a>
+        <a href="htmlpage2.html">HTML Element</a>
+        <a href="htmlpage3.html">HTML Attributes</a>
+        <a href="htmlpage4.html">HTML Heading</a>
+        <a href="htmlpage5.html">HTML paregraphs</a>
+        <a href="htmlpage6.html">HTML Style</a>
+        <a href="htmlpage7.html">HTML Formatting</a>
+       <!--page8 HTML Quotation None-->
+        <a href="htmlpage9.html">HTML Comments</a>
+        <!--page10 HTML color None-->
+        <a href="htmlpage12.html">HTML Css</a>
+        <a href="htmlpage13.html">HTML Links</a>
+        <a href="htmlpage14.html">HTML Images</a>
+        <a href="htmlpage15.html">HTML Favicon</a>
+        <a href="htmlpage16.html">HTML Page Title</a>
+        <a href="htmlpage17.html">HTML Tables</a>
+        <a href="htmlpage18.html">HTML Lists</a>
+        <a href="htmlpage19.html">HTML Block & Inline</a>
+        <a href="htmlpage20.html">HTML Div</a>
+        <a href="htmlpage21.html">HTML Classes</a>
+        <a href="htmlpage22.html">HTML Id</a>
+        <a href="htmlpage23.html">HTML Iframe</a>
+        <a href="htmlpage24.html">HTML Javascript</a>
+        <a href="htmlpage25.html">HTML File Paths</a>
+        <a href="htmlpage26.html">HTML Head</a>
+        <a href="htmlpage27.html">HTML Layout</a>
+        <a href="htmlpage28.html">HTML Responsive</a>
+        <a href="htmlpage29.html">HTML Computercode</a>
+        <a href="htmlpage30.html">HTML Semantics</a>
+        <a href="htmlpage31.html">HTML Style Guide</a>
+        <a href="htmlpage32.html">HTML Entities</a>
+        <a href="htmlpage33.html">HTML Symbols</a>
+        <a href="htmlpage34.html">HTML Emojis</a>
+        <a href="htmlpage35.html">HTML Charsets</a>
+        <a href="htmlpage36.html">HTML URL Ecode</a>
+        <a href="htmlpage37.html" style="font-size:25px;color:black;">HTML Forms</a>
+        <a href="htmlpage38.html">HTML Forms</a>
+        <a href="htmlpage39.html">HTML Attributes</a>
+        <a href="htmlpage40.html">HTML </a>
+        <a href="htmlpage41.html">HTML Attributes</a>
+        <a href="htmlpage42.html">HTML Form Attributes</a>
+        <a href="htmlpage43.html">HTML Input Type</a>
+        <a href="htmlpage44.html">HTML Input Attributes</a>
+        <a href="htmlpage45.html">HTML Input Form Attributes</a>
+        <a href="htmlpage46.html"style="font-size:25px;color:black;">HTML Media</a>
+        <a href="htmlpage47.html">HTML Video</a>
+        <a href="htmlpage48.html">HTML Audio</a>
+        <a href="htmlpage49.html">HTML Plug-ins</a>
+        <a href="htmlpage50.html"style="font-size:25px;color:black;">HTML Reference</a>
+        <a href="htmlpage51.html">HTML Tag List</a>
+        <a href="htmlpage52.html">HTML Color</a>
+        <!-- Add more menu items as needed -->
+    </div>
+
+
+    
+
+   
+   
+
+
+
+    
+    <script>
+        let likescount = 0;
+        let isliked = false;
+        const likescountElement = document.getElementById('Likes-count');
+
+        function toggleLikes() {
+            if (!isliked) {
+                likescount++;
+                likescountElement.textContent = likescount;
+                likescountElement.style.display = 'inline';
+                isliked = true;
+            }
+        }
+
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+        }
+    </script>
+
+    
+</body>
+</html>
