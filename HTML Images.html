@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Compiler</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: lightblue;
+            color: #4c4a4a;
+            transition: background-color 0.3s, color 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #button-container {
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        #button-container a{
+            text-decoration: none;
+            color: white;
+        }
+
+        .button {
+            cursor: pointer;
+            padding: 8px;
+            margin-right: 5px;
+            border: none;
+            color: #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .run-code-button {
+            background-color: #007bff;
+        }
+
+        .run-code-button:hover {
+            background-color: #0056b3;
+        }
+
+        .dark-mode-button {
+            background-color: #333;
+        }
+
+        .dark-mode-button:hover {
+            background-color: #555;
+        }
+
+        .home-button {
+            background-color: #28a745;
+        }
+
+        .home-button:hover {
+            background-color: #218838;
+        }
+
+        #code-container {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        #code,
+        #output {
+            width: 48%;
+            height: 400px;
+            box-sizing: border-box;
+            border: 2px solid black;
+            padding: 10px;
+            margin-top: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: whitesmoke;
+        }
+
+        /* Dark mode styles */
+        body.dark-mode {
+            background-color: #333;
+            color: cyan;
+        }
+
+        @media screen and (max-width: 600px) {
+            #code-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #code,
+            #output {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Code World</h1>
+
+    <!-- Button container for the menu bar -->
+    <div id="button-container">
+        <!-- Run Code button -->
+        <button class="button run-code-button" onclick="runCode()">Run Code</button>
+
+        <!-- Dark mode toggle -->
+        <button class="button dark-mode-button" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+        <!-- Home page icon -->
+        <button class="button home-button" onclick="goToHomePage()"><a href="index.html">🏠 Home</a></button>
+    </div>
+
+    <!-- Code container with textarea and output -->
+    <div id="code-container">
+        <!-- Textarea for code input -->
+        <textarea id="code" rows="25" cols="50" placeholder="Enter your code" style="font-size: 16px;">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    <h1>html image</h1>
+    <img src="butterflie.jpg" alt="butterflie image">   
+
+
+&lt;/body&gt;
+&lt;/html&gt;
+        </textarea>
+
+        <!-- Output iframe -->
+        <iframe id="output" frameborder="0"></iframe>
+    </div>
+
+    <script>
+        function runCode() {
+            var code = document.getElementById("code").value;
+
+            try {
+                // Create a new document in the iframe and write the code
+                var iframeDocument = document.getElementById("output").contentWindow.document;
+                iframeDocument.open();
+                iframeDocument.write(code);
+                iframeDocument.close();
+            } catch (error) {
+                document.getElementById("output").innerHTML = "Error: " + error.message;
+            }
+        }
+
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+
+        function goToHomePage() {
+            // Add functionality to go to the home page
+            alert("Redirecting to the home page!");
+        }
+    </script>
+</body>
+</html>
